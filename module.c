@@ -61,8 +61,12 @@ static int __init ttdriver_init(void)
 	tt_debugfs_root = debugfs_create_dir("tenstorrent", NULL);
 
 	err = init_char_driver(max_devices);
-	if (err == 0)
-		err = tenstorrent_pci_register_driver();
+	if (err == 0) {
+		// Register both PCIe and Thunderbolt drivers
+ 		err = tenstorrent_pci_register_driver();
+		if (err == 0)
+			err = tenstorrent_tb_register_driver();
+	}
 
 	return err;
 }
@@ -71,6 +75,8 @@ static void __exit ttdriver_cleanup(void)
 {
 	printk(KERN_INFO "Unloading Tenstorrent AI driver module.\n");
 
+	// unregister thunderbolt driver with pcie driver
+	tenstorrent_tb_unregister_driver();
 	tenstorrent_pci_unregister_driver();
 	cleanup_char_driver();
 	debugfs_remove(tt_debugfs_root);

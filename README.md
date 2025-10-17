@@ -4,6 +4,10 @@
 
 [https://github.com/tenstorrent/tt-kmd](https://github.com/tenstorrent/tt-kmd)
 
+## Supported interfaces:
+* PCIe
+* Thunderbolt 5
+
 ## Supported hardware:
 * Wormhole
 * Blackhole

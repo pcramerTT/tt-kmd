@@ -4,13 +4,13 @@
 
 [https://github.com/tenstorrent/tt-kmd](https://github.com/tenstorrent/tt-kmd)
 
-## Supported interfaces:
-* PCIe
-* Thunderbolt 5
-
 ## Supported hardware:
 * Wormhole
 * Blackhole
+
+## Supported interfaces:
+* PCIe
+* Thunderbolt 5
 
 The driver registers device files named `/dev/tenstorrent/%d`, one for each enumerated device.
 

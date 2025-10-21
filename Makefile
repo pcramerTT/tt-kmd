@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: GPL-2.0-only
 
 obj-m += tenstorrent.o
-tenstorrent-y := module.o chardev.o enumerate.o interrupt.o wormhole.o blackhole.o pcie.o hwmon.o sg_helpers.o memory.o tlb.o
+tenstorrent-y := module.o chardev.o enumerate.o interrupt.o wormhole.o blackhole.o pcie.o hwmon.o sg_helpers.o memory.o tlb.o thunderbolt.o thunderbolt_hotplug.o thunderbolt_memory.o thunderbolt_pcie.o
 
 KDIR := /lib/modules/$(shell uname -r)/build
 KMAKE := $(MAKE) -C $(KDIR) M=$(CURDIR)

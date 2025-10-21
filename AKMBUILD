@@ -1,3 +1,0 @@
-modname=tenstorrent
-modver=2.4.1
-built_modules='tenstorrent.ko'

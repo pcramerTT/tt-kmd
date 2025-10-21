@@ -1,1 +1,0 @@
-KERNEL=="tenstorrent*", MODE="0666"

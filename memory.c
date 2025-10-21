@@ -19,7 +19,6 @@
 #include "ioctl.h"
 #include "sg_helpers.h"
 #include "tlb.h"
-#include "thunderbolt.h"
 
 #define BAR0_SIZE (1UL << 29)
 
